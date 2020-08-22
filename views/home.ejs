@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+<body>
+    <form action="/search" method="GET">
+        <input type="text" name="keyword"/>
+        <button type="submit">Search</button>
+    </form>
+    <h1>Danh sach khach hang</h1>
+    <h2><a href="/them-khach-hang">Thêm khách hàng</a> </h2>
+    <ol>
+        <% khs.map(function (v) { %>
+            <li><a href="/chi-tiet-khach-hang/<%= v.ID %>"><%= v.TenKH %></a></li>
+        <% }) %>
+    </ol>
+</body>
+</html>
