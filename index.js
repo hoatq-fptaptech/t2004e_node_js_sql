@@ -11,17 +11,11 @@ app.use(express.static("public"));
 app.set("view engine","ejs");
 // config connect MSSQL
 const mssql = require("mssql");
-// const config = {
-//     server:'127.0.0.1',
-//     database:'T2004E',
-//     user: "sa",
-//     password: 'sa123'
-// }
 const config = {
-    server:'cloud-apt.database.windows.net',
-    database:'Development',
-    user: "quanghoa",
-    password: 'Studentaptech123'
+    server:'127.0.0.1',
+    database:'T2004E',
+    user: "sa",
+    password: 'sa123'
 }
 mssql.connect(config,function (err) {
    if(err) console.log(err);
